@@ -15,17 +15,13 @@ font-family: "Poppins" ;
 font-size: 14px;
 box-sizing: border-box;
 margin: 0;
-min-width: 960px; /*aby se nám stránka nedeformovala při přílišném zmenšení*/
-padding: 100px 0px 0px 0px; /*aby nám hlavička nepřekrývala obsah*/}
+min-width: 960px; 
+padding: 100px 0px 0px 0px; }
 
 h2, h3, h4{
 padding: 10px 0;
 color: #00386B;}
 
-td > h2{
-padding: 10px 0;
-color: #00386B;
-padding: 0 40%;}
 
 article h1{ 
 font-family: "PoppinsBold";
@@ -33,48 +29,37 @@ text-transform: uppercase;
 font-weight:bold;
 font-size: 2em;
 color:rgb(9, 7, 110);
-text-shadow: 3px 3px 4px #b2f3f5, 7px 7px 3px #666666;
-border-bottom: 3px solid rgb(236, 152, 41);
+text-shadow: 3px 3px 4px #b2f3f5, 7px 7px 3px #c4c1c1;
+border-bottom: 3px solid #34efdf;
 width: max-content;}
 
 
 article {
-margin: 0 auto; /*prvek bude vycentrovaný horizontálně (pokud má definovanou width nebo max-width).
-0 (nahoře a dole) → Žádné horní a spodní odsazení.
-auto (vlevo a vpravo) → Automatické zarovnání na střed.*/
-/* prvek musí mít definovanou width*/
+margin: 0 auto; 
+
+
 max-width: 960px;
 padding: 50px 50px 10px 50px;
- /*    50px (nahoře)
-50px (vpravo)
-10px (dole)
-50px (vlevo)
-
-👉 Co to dělá?
-
-    Vnitřní mezera nahoře, vpravo a vlevo je 50px.
-    Vnitřní mezera dole je pouze 10px (menší než ostatní).*/
-    /* = běžně používáno u hlavní stránky a zv. kontejneru*/
 }
 
  body > header{
  height: 100px;
  width: 100%;
- background: #00386B;
+ background: #20006b;
  color: white; 
  display: flex; 
  justify-content: space-evenly;
- /*toto z hlavičky udělá fixní menu*/
- position:fixed; /*rolování scrolbarem nemá na fixed vliv, zobrazí se na nastavené pozici*/
- z-index: 1; /* hlavnička se zobrazí nad všemi ostatními elementy*/
- top:0; /*hlavička se zobrazí vždy v horním okněstránky*/}   
+ position:fixed; 
+ z-index: 1; 
+ top:0; 
+}   
 
  nav ul{
- margin: 0; /* vypnutí vnějších okrajů tj. zmizí volné místo nahoře */
+ margin: 0; 
  list-style-type: none;
- display: flex; /* prvky se zobrazují vedle sebe*/
- align-items: center; /*centrace položek*/
- height: 100%; /*seznam roztáhli přes celou výšku navigačního menu*/}
+ display: flex; 
+ align-items: center; 
+ height: 100%; }
 
  nav ul a {
 color: white;
@@ -83,46 +68,44 @@ text-decoration: none;
 text-transform: uppercase;}
 
 nav ul a:hover, .aktivni a {
-border-bottom: 2px solid #EF6534;}
+border-bottom: 2px solid #34efdf;}
 
 
 .avatar{
-float: right; /* z obrázku uděláme plovoucí obsah tj. lze ho obtékat*/
+float: right; 
 padding-left: 2px;
 filter: grayscale(1);}
 
 
 .cistic {
-clear: both;}
+clear: both;
+margin-bottom: 40px;
+}
 
 .obrazek {
 width: 110px;
-display: block; /*změni obrazek na blokový prvek*/
-margin: auto; /*vycentruje ho na střed*/
-/*Centrace obrázku na střed:
-display: display: flex;       umožní použití flexboxu.
-justify-content:  center;     vycentruje horizontálně.
-align-items:      center;     vycentruje vertikálně.
-height: 150px;                nastaví pevnou výšku buňky, aby zarovnání fungovalo.;*/}
+display: block; 
+margin: auto; 
+}
 
-.tlacitkoReference{
+.tlacitkoProjekty{
 background-color: rgb(17, 192, 75);
 color:rgb(255, 255, 255);
 text-transform: uppercase;
 text-decoration: none;
 padding: 12px 12px;
 border-radius: 25px;
-box-sizing: border-bo}
+box-sizing: border-box;
+width: 30px;
+height: 20px;
+margin-top: 30px;
 
-.kontakt-tlacitko{
-background-color: #EF6534;
-padding: 10px 20px;
-border-radius: 20px;}
+}
 
-.kontakt-tlacitko:hover,
-.tlacitkoReference:hover {
+
+.tlacitkoProjekty:hover {
 filter:brightness(115%) contrast(85%);
-border:0; /* zabránění podtrhávání*/}
+border:0; }
 
 .vlevo{
 float:left;}
@@ -131,58 +114,57 @@ hmtl {
 background-color: #666666;}
 
 footer {
-box-sizing: border-box; /* výška patičky opravdu oněch 100px i po přidání padding*/
+box-sizing: border-box; 
 text-align: center;
-height: 100px;
+height: 80px;
 color: white;
 background: #414042;
-padding: 50px 0 0 0;
-clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%); /*ořízne obsah elementu podle předaného tvaru*/}
+margin-top: 50px;
+display: flex;               
+justify-content: center;     
+align-items: center;        
+}
 
-footer a {
-color: white;
-text-decoration: none; /*zrušení podtržení*/}
+
 
 #logo {
-margin: auto 0 auto 20px;
+margin: auto 80px auto 20px;
 height: 40px;
-display: flex; /*prvky se zobrazují vedle sebe*/
-flex-direction: column; /*prvky se zobrazují do sloupce*/
+display: flex; 
+flex-direction: column; 
 justify-content: center;
-background: url('obrazky/logo.png') no-repeat;
-background-size: 40px 40px;}
+background: url('../obrazky/logo.png') no-repeat;
+background-size: 40px 40px;
+padding-left: 50px;
+padding-bottom: 20px;
+}
 
-#logo > * {
-margin: 0 0 0 50px; /*aby nedošlo k překrytí objektů*/}
 
 #logo h1 {
 font-weight: normal;
 font-size: 1.5em;
 line-height: 1.2em;
-color: white;}
+color: white;
+}
 
 #logo h1 span {
 font-weight: bold;
-text-transform: uppercase;}
+text-transform: uppercase;
+}
 
 #logo small {
 text-transform: uppercase;
 font-size: 0.85em;}
 
-#dovednosti td{
-width: 33%;
-padding: 10px;
-vertical-align: top;
-border: 1px solid gray;}
 
-#dovednosti { /*slití rámečků*/
-border-collapse: collapse;}
-
-#reference img{
+#projekty img{
 border: 1px solid gray;
 padding: 6px;
 box-shadow: 3px 3px 6px #999999;
-margin-right: 6px;}
+margin-right: 6px;
+width: 200px;
+height: 160px;
+}
 
-#reference a:hover {
+#projekty a:hover {
 text-decoration: none;}
